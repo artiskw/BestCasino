@@ -1,0 +1,1121 @@
+@font-face { font-family: "Nunito-Black";  src: url("asetts/fonts/Nunito-Black.ttf");}
+@font-face { font-family: "Nunito-Regular";  src: url("asetts/fonts/Nunito-Regular.ttf");}
+@font-face { font-family: "Nunito-Bold";  src: url("asetts/fonts/Nunito-Bold.ttf");}
+@font-face { font-family: "Nunito-SemiBoldItalic";  src: url("asetts/fonts/Nunito-SemiBoldItalic.ttf");}
+@font-face { font-family: "Nunito-Italic";  src: url("asetts/fonts/Nunito-Italic.ttf");}
+
+$large-breakpoint: 1450px;
+$medium-breakpoint: 991px;
+$small-breakpoint: 767px;
+$mini-breakpoint: 575px;
+
+*:focus {
+  outline: 0;
+}
+
+*, ::after, ::before {
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6, p, ul, ol {
+  padding: 0;
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6, {
+  font-family: 'Nunito-Black', sans-serif;
+  font-weight: 800;
+}
+
+p {
+  font-family: 'Nunito-Regular', sans-serif;
+  font-weight: 400;
+}
+
+a {
+  text-decoration: none;
+}
+
+svg {
+  overflow: hidden;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 12px;
+}
+
+header {
+  background: #1b1d22;
+
+  .header-container {
+    width: 1400px;
+    margin: 0 auto;
+
+    .logo-menu {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 3px 0;
+
+      .logo {
+
+        @media only screen and (max-width: $mini-breakpoint) {
+          margin-top: 15px;
+        }
+      }
+
+      .menu {
+        .menu-main-menu-container {
+          ul {
+            display: flex;
+
+            li {
+              list-style: none;
+              margin-left: 20px;
+
+              a {
+                font-size: 14px;
+                line-height: 26px;
+                color: #798194;
+                font-family: 'Nunito-Regular', sans-serif;
+                transition: .5s;
+
+                &:hover {
+                  color: #f7f7f7;
+                }
+              }
+
+              &.current-menu-item {
+                a {
+                  color: #f7f7f7;
+                }
+              }
+
+              @media only screen and (max-width: $mini-breakpoint) {
+                margin-left: 0;
+                padding: 11px 0;
+                text-align: center;
+              }
+            }
+
+            @media only screen and (max-width: $mini-breakpoint) {
+              flex-direction: column;
+            }
+          }
+        }
+      }
+
+      @media only screen and (max-width: $mini-breakpoint) {
+        flex-direction: column;
+        padding: 0 0;
+      }
+    }
+
+    @media only screen and (max-width: $large-breakpoint) {
+      width: 100%;
+      padding: 0 15px;
+    }
+  }
+}
+
+.page-container {
+  background: #f7f7f7;
+  padding-bottom: 60px;
+
+  .page-content {
+    width: 1400px;
+    margin: 0 auto;
+
+    @media only screen and (max-width: $large-breakpoint) {
+      width: 100%;
+      padding: 0 15px;
+    }
+  }
+
+  &.single-page {
+    padding: 60px 0;
+  }
+
+  &.footer {
+    background: #1b1d1e;
+  }
+}
+
+.outside-block-container {
+  .title {
+    color: #1b1d22;
+    padding: 50px 0;
+
+    h1 {
+      font-size: 30px;
+      line-height: 32px;
+      color: #1b1d22;
+
+      @media only screen and (max-width: $large-breakpoint) {
+        font-size: 28px;
+      }
+
+      @media only screen and (max-width: $medium-breakpoint) {
+        font-size: 26px;
+      }
+
+      @media only screen and (max-width: $small-breakpoint) {
+        font-size: 24px;
+        text-align: center;
+      }
+
+      @media only screen and (max-width: $mini-breakpoint) {
+        font-size: 22px;
+      }
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 22px;
+      text-align: justify;
+      margin-top: 20px;
+
+      @media only screen and (max-width: $medium-breakpoint) {
+        margin-top: 15px;
+      }
+    }
+  }
+
+  .block-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    .block {
+      height: 550px;
+      width: calc(33% - 30px);
+      box-shadow: 2px 2px 17px -2px rgba(0,0,0,0.75);
+      border-radius: 10px;
+      background: #ffffff;
+      margin-bottom: 20px;
+
+      .block-inside {
+        position: relative;
+        height: 100%;
+        width: 100%;
+        border-radius: 10px;
+
+        .block-backgraund {
+          width: 100%;
+          height: 200px;
+          border-top-right-radius: 10px;
+        }
+
+        .logo-container {
+          .logo {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            background: #5800da;
+            border: 7px solid #fff;
+            margin: -77px auto 0px auto;
+
+            a {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              height: 100%;
+              width: 100%;
+
+              img {
+                width: 111px;
+              }
+            }
+          }
+        }
+
+        .bonus-container {
+          margin: 20px auto 10px auto;
+          text-align: center;
+          padding: 0 43px;
+
+          h2 {
+            font-size: 26px;
+            line-height: 36px;
+            color: #1b1d22;
+            transition: .5s;
+
+            &:hover {
+              color: #340082;
+            }
+
+            @media only screen and (max-width: $large-breakpoint) {
+              font-size: 23px;
+              line-height: 30px;
+            }
+
+            @media only screen and (max-width: $small-breakpoint) {
+              font-size: 22px;
+              line-height: 28px;
+            }
+
+            @media only screen and (max-width: $mini-breakpoint) {
+              font-size: 21px;
+              line-height: 27px;
+            }
+          }
+
+          h3 {
+            font-size: 14px;
+            line-height: 36px;
+            color: #434750;
+            text-transform: capitalize;
+            font-family: "Nunito-Regular", sans-serif;
+          }
+
+          @media only screen and (max-width: $large-breakpoint) {
+            margin: 10px auto 10px auto;
+          }
+        }
+
+        .bonus-code {
+          width: 140px;
+          background: #f6f8ff;
+          border: 1px solid #dbe2f7;
+          border-radius: 20px;
+          display: flex;
+          justify-content: center;
+          margin: 0 auto 0 auto;
+          position: absolute;
+          left: 0;
+          right: 0;
+          top: 74%;
+
+          p {
+            font-size: 12px;
+            line-height: 27px;
+            color: #1b1d22;
+            font-family: "Nunito-Regular", sans-serif;
+
+            span {
+              font-family: "Nunito-Bold", sans-serif;
+            }
+          }
+        }
+
+        .btn-container {
+          display: flex;
+          justify-content: center;
+          margin: 0 0 0 0;
+          flex-direction: column;
+          align-items: center;
+
+          .button-container {
+            width: 230px;
+            background: #1b1d22;
+            border-radius: 25px;
+            transition: .5s;
+            position: absolute;
+            top: 81%;
+
+            a {
+              font-size: 16px;
+              line-height: 45px;
+              color: #ffffff;
+              text-transform: uppercase;
+              display: flex;
+              justify-content: center;
+              width: 100%;
+              font-family: "Nunito-Black", sans-serif;
+            }
+
+            &:hover {
+              background: #5800da;
+            }
+          }
+
+          .tc-apply {
+            position: absolute;
+            top: 91%;
+            z-index: 9999999;
+
+            a {
+              .apply {
+                font-size: 14px;
+                line-height: 20px;
+                color: #434750;
+                transition: .5s;
+                text-align: center;
+
+                &:hover {
+                  color: #1b1d22;
+                }
+              }
+
+              .show-text {
+                .hover-info {
+                  font-size: 12px;
+                  line-height: 15px;
+                  color: #a5a5a5;
+                  text-align: center;
+
+                  p {
+                    font-family: 'Nunito-Italic', sans-serif;
+                  }
+                }
+
+                .show-text-hover {
+                  background-color: #494a4e;
+                  flex-direction: column;
+                  border-radius: 10px;
+                  padding: 10px 10px;
+                  display: none;
+                  transition: .5s;
+
+                  h6 {
+                    font-size: 12px;
+                    line-height: 15px;
+                    color: #ffffff;
+                  }
+
+                  p {
+                    margin-top: 8px;
+                    font-size: 12px;
+                    line-height: 17px;
+                    color: #ffffff;
+                  }
+                }
+              }
+
+              &:hover {
+                .apply {
+                  color: #1b1d22;
+                }
+
+                .show-text {
+                  .show-text-hover {
+                    display: flex;
+                    opacity: 0.97;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      @media only screen and (max-width: $large-breakpoint) {
+        width: calc(33% - 23px);
+      }
+
+      @media only screen and (max-width: $medium-breakpoint) {
+        width: calc(48% - 13px);
+      }
+
+      @media only screen and (max-width: $small-breakpoint) {
+        width: 440px;
+      }
+    }
+
+    @media only screen and (max-width: $small-breakpoint) {
+      justify-content: center;
+    }
+  }
+}
+
+.list-container {
+  padding: 60px 0 0 0;
+
+  .title {
+    color: #1b1d22;
+    padding-bottom: 60px;
+
+    h2 {
+      text-transform: uppercase;
+      font-size: 30px;
+      line-height: 28px;
+      margin-bottom: 20px;
+
+      @media only screen and (max-width: $large-breakpoint) {
+        font-size: 28px;
+      }
+
+      @media only screen and (max-width: $medium-breakpoint) {
+        font-size: 26px;
+        margin-bottom: 15px;
+      }
+
+      @media only screen and (max-width: $small-breakpoint) {
+        font-size: 24px;
+        text-align: center;
+      }
+
+      @media only screen and (max-width: $mini-breakpoint) {
+        font-size: 22px;
+      }
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 22px;
+      justify-content: center;
+    }
+
+    @media only screen and (max-width: $large-breakpoint) {
+      padding-bottom: 30px;
+    }
+  }
+
+  .list-paragraf-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+
+    .list {
+      background: #1b1d22;
+      padding: 15px 25px;
+      display: flex;
+      border-top-left-radius: 7px;
+      border-top-right-radius: 7px;
+      align-items: center;
+      justify-content: space-between;
+
+      .logo-name-container {
+        display: flex;
+        align-items: center;
+
+        .logo {
+          width: 70px;
+          height: 70px;
+          background: #5800da;
+          border-radius: 50%;
+          margin-right: 30px;
+          flex-shrink: 0;
+
+          a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+
+            img {
+              max-width: 55px;
+            }
+          }
+
+          @media only screen and (max-width: $large-breakpoint) {
+            margin-right: 0;
+          }
+
+          @media only screen and (max-width: $medium-breakpoint) {
+            margin-right: 25px;
+          }
+
+          @media only screen and (max-width: $mini-breakpoint) {
+            margin: 0 0 0 0;
+          }
+        }
+
+        .name {
+          flex-shrink: 0;
+
+          h3 {
+            text-transform: capitalize;
+            font-size: 20px;
+            line-height: 36px;
+            color: #ffffff;
+            font-family: 'Nunito-Bold', sans-serif;
+          }
+
+          @media only screen and (max-width: $mini-breakpoint) {
+            margin-top: 5px;
+          }
+        }
+
+        @media only screen and (max-width: $large-breakpoint) {
+          flex-direction: column;
+          text-align: center;
+        }
+
+        @media only screen and (max-width: $medium-breakpoint) {
+         flex-direction: unset;
+        }
+
+        @media only screen and (max-width: $mini-breakpoint) {
+          flex-direction: column;
+        }
+      }
+
+      .bonus {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 137px;
+        width: 572px;
+
+        h2 {
+          font-size: 22px;
+          line-height: 36px;
+          color: #ffffff;
+          transition: .5s;
+          text-align: center;
+
+          &:hover {
+            color: #7e28ff;
+          }
+
+          @media only screen and (max-width: $large-breakpoint) {
+            font-size: 21px;
+          }
+
+          @media only screen and (max-width: $mini-breakpoint) {
+            font-size: 20px;
+          }
+        }
+
+        h3 {
+          font-size: 14px;
+          color: #ffffff;
+          font-weight: 400;
+          line-height: 24px;
+          font-family: "Nunito-Regular", sans-serif;
+        }
+
+        @media only screen and (max-width: $large-breakpoint) {
+          margin: 0 70px;
+        }
+
+        @media only screen and (max-width: $medium-breakpoint) {
+          width: 100%;
+          margin: 15px 0 15px 0;
+          padding: 0 70px;
+        }
+
+        @media only screen and (max-width: $small-breakpoint) {
+          padding: 0 15px;
+        }
+
+        @media only screen and (max-width: $mini-breakpoint) {
+          margin: 10px 0 20px 0;
+        }
+      }
+
+      .btn {
+        width: 230px;
+        flex-shrink: 0;
+
+        a {
+          font-weight: 800;
+          font-size: 16px;
+          line-height: 36px;
+          color: #ffffff;
+          background: #5800da;
+          display: flex;
+          transition: .5s;
+          border-radius: 20px;
+          text-transform: uppercase;
+          justify-content: center;
+          padding: 4.6px 0;
+          font-family: "Nunito-Black", sans-serif;
+
+          &:hover {
+            background: #34383e;
+          }
+        }
+      }
+
+      @media only screen and (max-width: $large-breakpoint) {
+        padding: 15px 15px;
+      }
+
+      @media only screen and (max-width: $medium-breakpoint) {
+        flex-direction: column;
+      }
+    }
+
+    .paragraf-icon-apply {
+      background: #34383e;
+      padding: 15px 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      border-bottom-left-radius: 7px;
+      border-bottom-right-radius: 7px;
+
+      p {
+        font-size: 14px;
+        line-height: 20px;
+        color: #798194;
+      }
+
+      a {
+        .icon-apply {
+          display: flex;
+          align-items: center;
+          margin-top: 14px;
+
+          svg {
+            width: 36px;
+            margin-right: 8px;
+
+            .st0 {
+              fill:none;
+              stroke:#ffffff;
+              stroke-width:22;
+              transition: .5s;
+            }
+
+            .st1 {
+              fill-rule:evenodd;
+              clip-rule:evenodd;
+              fill:#ffffff;
+              transition: .5s;
+            }
+          }
+
+          p {
+            font-size: 14px;
+            line-height: 20px;
+            font-weight: 400;
+            color: #ffffff;
+            transition: .5s;
+            font-family: 'Nunito-SemiBoldItalic', sans-serif;
+          }
+        }
+
+        &:hover {
+          svg {
+            .st0 {
+              stroke: #798194;
+            }
+
+            .st1 {
+              fill:#798194;
+            }
+          }
+
+          p {
+            color: #798194;
+          }
+        }
+      }
+
+      @media only screen and (max-width: $large-breakpoint) {
+        padding: 15px 15px;
+      }
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  @media only screen and (max-width: $mini-breakpoint) {
+    padding: 40px 0 0 0;
+  }
+}
+
+footer {
+  .icon-container-large {
+    background: #5800da;
+
+    .icon-container {
+      margin: 0 auto;
+      width: 1400px;
+      display: flex;
+      justify-content: center;
+
+      a {
+        padding: 23px 0;
+
+        svg {
+          max-width: 240px;
+          height: 40px;
+          fill: #fff;
+          transition: .5s;
+          margin-left: 40px;
+
+          &.bga-icon {
+            margin-left: 0;
+          }
+
+          path {
+            fill: #fff;
+            transition: .5s;
+          }
+
+          g {
+            fill: #fff;
+            transition: .5s;
+          }
+
+          .st0{
+            fill:none;
+            stroke: #fff;
+            stroke-width: 22;
+            transition: .5s;
+          }
+
+          .st1 {
+            fill-rule:evenodd;
+            clip-rule:evenodd;
+            fill: #fff;
+            transition: .5s;
+          }
+
+          @media only screen and (max-width: $small-breakpoint) {
+            margin-left: 0;
+          }
+
+          @media only screen and (max-width: $mini-breakpoint) {
+            height: 35px;
+          }
+        }
+
+        &:hover {
+          svg {
+            fill: #798194;
+
+            path {
+              fill: #798194;
+            }
+
+            g {
+              fill: #798194;
+            }
+
+            .st0 {
+              fill:none;
+              stroke:#798194;
+              stroke-width:22;
+            }
+
+            .st1 {
+              fill-rule:evenodd;
+              clip-rule:evenodd;
+              fill:#798194;
+            }
+          }
+        }
+
+        @media only screen and (max-width: $small-breakpoint) {
+          padding: 0 0;
+          margin-bottom: 10px;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+
+      @media only screen and (max-width: $large-breakpoint) {
+        width: 100%;
+        padding: 0 15px;
+      }
+
+      @media only screen and (max-width: $small-breakpoint) {
+        flex-direction: column;
+        align-items: center;
+        padding: 15px 15px;
+      }
+    }
+  }
+
+  .terms-text-container {
+    background: #34383e;
+
+    .terms-text {
+      margin: 0 auto;
+      width: 1400px;
+      display: flex;
+      justify-content: center;
+
+      p {
+        font-size: 14px;
+        line-height: 20px;
+        color: #798194;
+        padding: 10px 0;
+        text-align: center;
+      }
+
+      @media only screen and (max-width: $large-breakpoint) {
+        width: 100%;
+        padding: 0 15px;
+      }
+    }
+  }
+}
+
+.large-paragraf-container {
+  background: #fff;
+  padding: 60px 250px 40px 250px;
+  font-size: 16px;
+  color: #798194;
+
+  &.home-page {
+    background: #1b1d1e;
+    padding: 40px 0 25px 0;
+    font-size: 16px;
+    color: #798194;
+
+    h1 {
+      font-size: 30px;
+      line-height: 37px;
+      color: #798194;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+
+      @media only screen and (max-width: $medium-breakpoint) {
+        font-size: 28px;
+      }
+
+      @media only screen and (max-width: $small-breakpoint) {
+        font-size: 26px;
+      }
+
+      @media only screen and (max-width: $mini-breakpoint) {
+        font-size: 24px;
+        text-align: center;
+        margin-bottom: 15px;
+        line-height: 30px;
+      }
+    }
+
+    h2,h3 {
+      font-size: 24px;
+      line-height: 37px;
+      color: #798194;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+
+      @media only screen and (max-width: $medium-breakpoint) {
+        font-size: 22px;
+        line-height: 34px;
+      }
+
+      @media only screen and (max-width: $small-breakpoint) {
+        font-size: 20px;
+        line-height: 30px;
+      }
+
+      @media only screen and (max-width: $mini-breakpoint) {
+        line-height: 26px;
+        font-size: 18px;
+        text-align: center;
+        margin-bottom: 15px;
+      }
+    }
+
+    h4,h5,h6 {
+      font-size: 20px;
+      line-height: 28px;
+      color: #798194;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+
+      @media only screen and (max-width: $mini-breakpoint) {
+        font-size: 17px;
+        line-height: 24px;
+        text-align: center;
+        margin-bottom: 15px;
+      }
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 22px;
+      text-align: justify;
+      color: #798194;
+      margin: 20px 0;
+
+      @media only screen and (max-width: $mini-breakpoint) {
+        margin-bottom: 15px;
+      }
+    }
+
+    a {
+      color: #5800da;
+      transition: .5s;
+      font-family: "Nunito-Regular", sans-serif;
+
+      &:hover {
+        color:  #fff;
+      }
+    }
+
+    ul {
+      font-family: 'Nunito-Regular', sans-serif;
+      font-weight: 400;
+      font-size: 16px;
+      margin: 20px 0 20px 15px;
+      color: #798194;
+
+      li {
+        margin: 0 0 10px 0;
+        list-style: none;
+        color: #798194;
+
+        &::before {
+          content: url("asetts/images/angle-right-solid-white .svg");
+          padding-right: 5px;
+        }
+      }
+
+      @media only screen and (max-width: $mini-breakpoint) {
+        margin: 15px 0 15px 15px;
+      }
+    }
+
+    ol {
+      font-family: 'Nunito-Regular', sans-serif;
+      font-weight: 400;
+      font-size: 16px;
+      margin: 20px 0 20px 33px;
+      color: #798194;
+
+      li  {
+        margin: 0 0 10px 0;
+        list-style: decimal;
+        color: #798194;
+      }
+    }
+  }
+
+  h1 {
+    font-size: 30px;
+    line-height: 37px;
+    color: #1b1d22;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+
+    @media only screen and (max-width: $medium-breakpoint) {
+      font-size: 28px;
+    }
+
+    @media only screen and (max-width: $small-breakpoint) {
+      font-size: 26px;
+    }
+
+    @media only screen and (max-width: $mini-breakpoint) {
+      font-size: 24px;
+      text-align: center;
+      margin-bottom: 15px;
+      line-height: 30px;
+    }
+  }
+
+  h2,h3 {
+    font-size: 24px;
+    line-height: 37px;
+    color: #1b1d22;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+
+    @media only screen and (max-width: $medium-breakpoint) {
+      font-size: 22px;
+      line-height: 34px;
+    }
+
+    @media only screen and (max-width: $small-breakpoint) {
+      font-size: 20px;
+      line-height: 30px;
+    }
+
+    @media only screen and (max-width: $mini-breakpoint) {
+      line-height: 26px;
+      font-size: 18px;
+      text-align: center;
+      margin-bottom: 15px;
+    }
+  }
+
+  h4,h5,h6 {
+    font-size: 20px;
+    line-height: 28px;
+    color: #1b1d22;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+
+    @media only screen and (max-width: $mini-breakpoint) {
+      font-size: 17px;
+      line-height: 24px;
+      text-align: center;
+      margin-bottom: 15px;
+    }
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 22px;
+    text-align: justify;
+    color: #1b1d22;
+    margin: 20px 0;
+
+    @media only screen and (max-width: $mini-breakpoint) {
+      margin-bottom: 15px;
+    }
+  }
+
+  a {
+    color: #5800da;
+    transition: .5s;
+
+    &:hover {
+      color:  #404040;
+    }
+  }
+
+  ul {
+    font-family: 'Nunito-Regular', sans-serif;
+    font-size: 16px;
+    margin: 20px 0 20px 15px;
+    color: #1b1d22;
+
+    li {
+      margin: 0 0 10px 0;
+      list-style: none;
+      color: #1b1d22;
+
+      &::before {
+        content: url("asetts/images/angle-right-solid-white .svg");
+        padding-right: 5px;
+      }
+    }
+
+    @media only screen and (max-width: $mini-breakpoint) {
+      margin: 15px 0 15px 15px;
+    }
+  }
+
+  ol {
+    font-family: 'Nunito-Regular', sans-serif;
+    font-size: 16px;
+    margin: 20px 0 20px 33px;
+    color: #1b1d22;
+
+    li {
+      margin: 0 0 10px 0;
+      list-style: decimal;
+      color: #1b1d22;
+    }
+  }
+
+  @media only screen and (max-width: $large-breakpoint) {
+    padding: 50px 100px 30px 100px;
+  }
+
+  @media only screen and (max-width: $medium-breakpoint) {
+    padding: 40px 15px 20px 15px;
+  }
+
+  @media only screen and (max-width: $small-breakpoint) {
+    padding: 40px 15px 15px 15px;
+  }
+
+  @media only screen and (max-width: $mini-breakpoint) {
+    padding: 20px 15px 1px 15px;
+  }
+}
